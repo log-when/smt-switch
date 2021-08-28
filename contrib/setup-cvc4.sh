@@ -16,6 +16,7 @@ if [ ! -d "$DEPS/CVC4" ]; then
     ./contrib/get-antlr-3.4
     git clone https://github.com/uiri/toml.git
     export PYTHONPATH=$PYTHONPATH:`pwd`/toml
+    ./contrib/get-gmp-dev
     CXXFLAGS=-fPIC CFLAGS=-fPIC ./configure.sh --static --no-static-binary
     cd build
     make -j4
