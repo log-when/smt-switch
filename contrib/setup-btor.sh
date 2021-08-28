@@ -23,7 +23,7 @@ if [ ! -d "$DEPS/boolector" ]; then
     git checkout -f $BTOR_VERSION
     CFLAGS="" ./contrib/setup-btor2tools.sh
     ./contrib/setup-cadical.sh
-    ./configure.sh --only-cadical -fPIC
+    ./configure.sh --shared --only-cadical -fPIC
     cd build
     make -j$NUM_CORES
     cd $DIR
